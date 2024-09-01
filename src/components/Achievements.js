@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const achievements = [
@@ -32,7 +32,7 @@ const achievements = [
   },
   {
     title: 'User Engagement Increase',
-    value: 22.5,
+    value: 25,
     max: 100,
     unit: '%',
     statement: 'Developed a browser extension using Chrome API and ReactJS, projected to reduce manual work and increase user engagement by 20-25% upon deployment.'
@@ -41,41 +41,66 @@ const achievements = [
 
 const Achievements = () => {
   const [counts, setCounts] = useState(achievements.map(() => 0));
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
   const [visibleIndex, setVisibleIndex] = useState(null);
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds for each animation
-    const interval = 50; // Update every 50 milliseconds
-    const increment = 1; // Increment step
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect(); // Stop observing once it's visible
+      }
+    }, {
+      threshold: 0.1 // Adjust this value as needed
+    });
 
-    const updateCounts = () => {
-      const timers = achievements.map((achievement, index) => {
-        const endValue = achievement.value;
-        let currentValue = 0;
-        const timer = setInterval(() => {
-          setCounts(prevCounts => {
-            const newCounts = [...prevCounts];
-            if (currentValue >= endValue) {
-              clearInterval(timer);
-              return newCounts;
-            }
-            currentValue += increment;
-            newCounts[index] = Math.min(currentValue, endValue);
-            return newCounts;
-          });
-        }, interval);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
-        return timer;
-      });
-
-      return () => timers.forEach(timer => clearInterval(timer));
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
-
-    updateCounts();
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      const duration = 2000; // 2 seconds for each animation
+      const interval = 50; // Update every 50 milliseconds
+      const increment = 1; // Increment step
+
+      const updateCounts = () => {
+        const timers = achievements.map((achievement, index) => {
+          const endValue = achievement.value;
+          let currentValue = 0;
+          const timer = setInterval(() => {
+            setCounts(prevCounts => {
+              const newCounts = [...prevCounts];
+              if (currentValue >= endValue) {
+                clearInterval(timer);
+                return newCounts;
+              }
+              currentValue += increment;
+              newCounts[index] = Math.min(currentValue, endValue);
+              return newCounts;
+            });
+          }, interval);
+
+          return timer;
+        });
+
+        return () => timers.forEach(timer => clearInterval(timer));
+      };
+
+      updateCounts();
+    }
+  }, [isVisible]);
+
   return (
-    <section id="achievements" className="my-12 px-4 sm:px-6 lg:px-8">
+    <section id="achievements" ref={sectionRef} className="my-12 px-4 sm:px-6 lg:px-8">
       <motion.h2
         className="text-3xl font-semibold mb-6 text-primary"
         initial={{ opacity: 0 }}

@@ -8,6 +8,7 @@ import Technologies from './components/Technologies';
 import Contact from './components/Contact';
 import Achievements from './components/Achievements';
 import ScrollProgressBar from './components/ScrollProgressBar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Technologies />
       <Achievements />
       <Contact />
+      <Footer/>
     </div>
   );
 };
