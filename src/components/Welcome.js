@@ -22,10 +22,13 @@ const Welcome = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl font-extrabold text-dark mb-4">
-            Hi, I am Mohamed Arfat,<br />
-            And I create beautiful, stunning looking websites.
+          <h1 className="text-3xl md:text-5xl font-extrabold text-dark mb-4 text-center md:text-left">
+            Hey, I'm Mohamed Arfat<br />
           </h1>
+          <span className="text-1xl md:text-3xl font-extrabold text-dark mb-4 text-center md:text-left">
+            <p className="text-gray-600"> I create beautiful, stunning looking websites.</p>
+          </span>
+          <br />
           <a
             href="resume.pdf"
             download
@@ -40,10 +43,14 @@ const Welcome = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src='ArfatDP_2_no_bg.png' alt="Profile" className="rounded-full shadow-lg" />
-        </motion.div>        
+          <img
+            src='ArfatDP_2_no_bg.png'
+            alt="Profile"
+            className="rounded-full shadow-lg w-40 h-40 md:w-72 md:h-72 object-cover"
+          />
+        </motion.div>
       </div>
-      
+
       {/* Scroll down icon */}
       <motion.div
         className="absolute bottom-8 flex justify-center w-full"

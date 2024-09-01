@@ -9,11 +9,14 @@ import Contact from './components/Contact';
 import Achievements from './components/Achievements';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import Footer from './components/Footer';
+import ChatWidget from './components/ChatWidget';
+import SidePanel from './components/SidePanel';
 
 const App = () => {
   return (
     <div>
       <Header />
+      <SidePanel /> 
       <ScrollProgressBar/>
       <Welcome />
       <About />
@@ -23,6 +26,7 @@ const App = () => {
       <Achievements />
       <Contact />
       <Footer/>
+      <ChatWidget />
     </div>
   );
 };

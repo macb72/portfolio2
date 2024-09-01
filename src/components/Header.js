@@ -1,3 +1,4 @@
+// Header.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
@@ -42,7 +43,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'} ${scrolled ? 'bg-primary text-white py-4' : 'bg-background text-secondary py-2'}`}
     >
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,11 +51,10 @@ const Header = () => {
         >
           <h1 className={`text-2xl font-extrabold ${scrolled ? 'text-white' : 'text-primary'}`}>
             <span className="inline-block text-3xl font-bold">Mohd Arfat</span><br />
-            {/* <span className="text-lg">[Designation]</span> */}
           </h1>
         </motion.div>
-        <nav>
-          <ul className="flex flex-wrap space-x-6 text-lg">
+        <nav className="hidden md:block"> {/* Hide links for mobile devices */}
+          <ul className="flex space-x-6 text-lg">
             <li>
               <Link
                 to="about"
@@ -107,6 +107,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        {/* Mobile menu button */}
         <button className="md:hidden flex items-center">
           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
