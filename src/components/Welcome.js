@@ -27,7 +27,7 @@ const Welcome = () => {
             And I create beautiful, stunning looking websites.
           </h1>
           <a
-            href="/resume.pdf"
+            href="resume.pdf"
             download
             className="inline-block bg-primary text-white py-2 px-4 rounded-lg shadow-lg hover:bg-secondary transition-colors"
           >
@@ -40,7 +40,7 @@ const Welcome = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src='/ArfatDP_2_no_bg.png' alt="Profile" className="rounded-full shadow-lg" />
+          <img src='ArfatDP_2_no_bg.png' alt="Profile" className="rounded-full shadow-lg" />
         </motion.div>        
       </div>
       
