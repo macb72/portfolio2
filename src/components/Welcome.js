@@ -25,8 +25,8 @@ const Welcome = () => {
           <h1 className="text-3xl md:text-5xl font-extrabold text-dark mb-4 text-center md:text-left">
             Hey, I'm Mohamed Arfat<br />
           </h1>
-          <span className="text-1xl md:text-3xl font-extrabold text-dark mb-4 text-center md:text-left">
-            <p className="text-gray-600"> I create beautiful, stunning looking websites.</p>
+          <span className="text-1xl md:text-2xl font-extrabold text-dark mb-4 text-center md:text-left">
+            <p className="text-gray-600"> I create beautiful & stunning looking websites.</p>
           </span>
           <br />
           <a
@@ -35,7 +35,14 @@ const Welcome = () => {
             className="inline-block bg-primary text-white py-2 px-4 rounded-lg shadow-lg hover:bg-secondary transition-colors"
           >
             Download Resume
-          </a>
+          </a> &nbsp;
+          {/* <a
+            href="resume.pdf"
+            download
+            className="inline-block bg-tertiary text-black py-2 px-4 rounded-lg shadow-lg hover:bg-primary transition-colors"
+          >
+            Hire Me!
+          </a> */}
         </motion.div>
         <motion.div
           className="md:w-1/2 flex justify-center"
