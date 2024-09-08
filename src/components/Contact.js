@@ -1,7 +1,22 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+
+    // Send email using EmailJS
+    emailjs.sendForm('service_dlblibl', 'template_1jco4j8', form, 'shaikharafad72@gmail.com')
+      .then((result) => {
+        alert('Message sent successfully!');
+        form.reset();
+      }, (error) => {
+        alert('Error sending message.');
+      });
+  };
+
   return (
     <section id="contact" className="my-12 px-4 sm:px-6 lg:px-8">
       <motion.h2
@@ -12,11 +27,7 @@ const Contact = () => {
       >
         Contact
       </motion.h2>
-      <form
-        action="/api/contact" // This is where you would handle form submission
-        method="POST"
-        className="space-y-4"
-      >
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col">
           <label htmlFor="name" className="text-gray-700">Name</label>
           <input type="text" id="name" name="name" className="p-2 border border-gray-300 rounded-md" required />
