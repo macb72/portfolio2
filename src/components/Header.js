@@ -25,7 +25,7 @@ const Header = () => {
 
   const resetHideTimeout = () => {
     if (hideTimeout) clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => setVisible(false), 500); // Hide the header after 2 seconds of inactivity
+    hideTimeout = setTimeout(() => setVisible(false), 500); 
   };
 
   useEffect(() => {
@@ -77,6 +77,16 @@ const Header = () => {
             </li>
             <li>
               <Link
+                to="achievements"
+                smooth={true}
+                duration={500}
+                className={`hover:underline transition-colors ${scrolled ? 'text-white' : 'text-primary'}`}
+              >
+                Achievements
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="skills"
                 smooth={true}
                 duration={500}
@@ -95,7 +105,7 @@ const Header = () => {
                 Technologies
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="contact"
                 smooth={true}
@@ -104,7 +114,7 @@ const Header = () => {
               >
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         {/* Mobile menu button */}

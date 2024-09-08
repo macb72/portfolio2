@@ -21,9 +21,9 @@ const App = () => {
       <Welcome />
       <About />
       <Experience />
+      <Achievements />
       <Skills />
       <Technologies />
-      <Achievements />
       <Contact />
       <Footer/>
       {/* <ChatWidget /> */}
