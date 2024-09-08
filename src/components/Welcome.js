@@ -11,7 +11,11 @@ const Welcome = () => {
         behavior: 'smooth',
       });
     }
-  };
+  }
+
+  const handleHireMeClick = () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  };;
 
   return (
     <section id="welcome" className="flex flex-col items-center justify-center min-h-screen bg-light px-4 sm:px-6 lg:px-8 relative">
@@ -36,13 +40,12 @@ const Welcome = () => {
           >
             Download Resume
           </a> &nbsp;
-          {/* <a
-            href="resume.pdf"
-            download
-            className="inline-block bg-tertiary text-black py-2 px-4 rounded-lg shadow-lg hover:bg-primary transition-colors"
+          <a
+            onClick={handleHireMeClick}
+            className="inline-block bg-tertiary text-primary py-2 px-4 rounded-lg shadow-lg transition-colors cursor-pointer"
           >
             Hire Me!
-          </a> */}
+          </a>
         </motion.div>
         <motion.div
           className="md:w-1/2 flex justify-center"

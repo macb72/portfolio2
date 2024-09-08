@@ -25,14 +25,14 @@ const achievements = [
   },
   {
     title: 'Performance Enhancement',
-    value: 30,
+    value: 35,
     max: 100,
     unit: '%',
     statement: 'Optimized and refactored key components, enhancing performance by 30% and maintainability.'
   },
   {
     title: 'User Engagement Increase',
-    value: 25,
+    value: 30,
     max: 100,
     unit: '%',
     statement: 'Developed a browser extension using Chrome API and ReactJS, projected to reduce manual work and increase user engagement by 20-25% upon deployment.'

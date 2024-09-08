@@ -26,7 +26,7 @@ const App = () => {
       <Achievements />
       <Contact />
       <Footer/>
-      <ChatWidget />
+      {/* <ChatWidget /> */}
     </div>
   );
 };

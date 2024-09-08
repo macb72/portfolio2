@@ -9,7 +9,7 @@ const ChatWidget = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 3000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 

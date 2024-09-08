@@ -51,10 +51,10 @@ const Experience = () => {
       <div className="relative">
         <ul className="list-none p-0 relative">
           {experienceSteps.map((step, index) => (
-            <li key={index} className="relative pl-8 mb-8 flex items-start">
+            <li key={index} className="relative pl-12 mb-8 flex items-start">
               {/* Circle indicator with conditional styling */}
               <div
-                className={`absolute left-0 top-0 w-4 h-4 rounded-full border-2 ${
+                className={`absolute left-0 top-2 w-4 h-4 rounded-full border-2 ${
                   index === currentStep ? 'bg-primary border-primary' : 'bg-white border-gray-300'
                 } z-10`}
               ></div>
@@ -64,10 +64,11 @@ const Experience = () => {
                 <div className="absolute left-2 top-4 w-px h-full bg-gray-300"></div>
               )}
 
-              <div className="ml-4">
+              <div className="ml-6">
                 <h3 className="text-xl font-semibold">{step.title}</h3>
-                <p className="text-gray-600">{step.company}</p>
-                <p className="text-gray-600 mb-2">{step.duration}</p>
+                <p className="text-gray-600">{step.company} , {step.duration} </p>
+                {/* <p className="text-gray-600 mb-2">{step.duration}</p> */}
+                <br/>
                 <ul className="list-disc ml-6 space-y-1">
                   {step.responsibilities.map((resp, respIndex) => (
                     <li key={respIndex}>{resp}</li>
