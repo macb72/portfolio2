@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './ScrollProgressBar.css'; // Create this CSS file for styling
 
 const ScrollProgressBar = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -15,16 +14,16 @@ const ScrollProgressBar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Set initial value
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="scroll-progress-bar">
+    <div className="fixed top-0 left-0 right-0 h-1 bg-transparent z-[60]">
       <div
-        className="scroll-progress-bar-fill"
+        className="h-full bg-gradient-to-r from-primary via-accent to-primary transition-all duration-100"
         style={{ width: `${scrollPercentage}%` }}
-      ></div>
+      />
     </div>
   );
 };

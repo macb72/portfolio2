@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaAngleDoubleDown } from 'react-icons/fa';
+import { FaAngleDoubleDown, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineDocumentDownload, HiOutlineMail } from 'react-icons/hi';
 
 const Welcome = () => {
   const scrollToSection = (sectionId) => {
@@ -11,65 +12,131 @@ const Welcome = () => {
         behavior: 'smooth',
       });
     }
-  }
+  };
 
   const handleHireMeClick = () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-  };;
+  };
 
   return (
-    <section id="welcome" className="flex flex-col items-center justify-center min-h-screen bg-light px-4 sm:px-6 lg:px-8 relative">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+    <section id="welcome" className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-accent/10 to-primary/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 relative z-10">
         <motion.div
-          className="md:w-1/2"
+          className="md:w-1/2 text-center md:text-left"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl md:text-5xl font-extrabold text-dark mb-4 text-center md:text-left">
-            Hey, I'm Mohamed Arfat<br />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+          >
+            Senior Frontend Engineer
+          </motion.div>
+          
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
+            Hey, I'm{' '}
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Mohamed Arfat
+            </span>
           </h1>
-          <span className="text-1xl md:text-2xl font-extrabold text-dark mb-4 text-center md:text-left">
-            <p className="text-gray-600"> I create beautiful & stunning looking websites.</p>
-          </span>
-          <br />
-          <a
-            href="resume.pdf"
-            download
-            className="inline-block bg-primary text-white py-2 px-4 rounded-lg shadow-lg hover:bg-secondary transition-colors"
-          >
-            Download Resume
-          </a> &nbsp;
-          <a
-            onClick={handleHireMeClick}
-            className="inline-block bg-tertiary text-primary py-2 px-4 rounded-lg shadow-lg transition-colors cursor-pointer"
-          >
-            Hire Me!
-          </a>
+          
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
+            Building scalable, production-grade web applications with React and modern JavaScript. 
+            <span className="font-medium text-gray-800"> 6+ years</span> crafting data-driven interfaces at Jio Platforms.
+          </p>
+          
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+            <motion.a
+              href="resume.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-blue-600 text-white py-3 px-6 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <HiOutlineDocumentDownload className="text-xl" />
+              Download Resume
+            </motion.a>
+            
+            <motion.button
+              onClick={handleHireMeClick}
+              className="inline-flex items-center gap-2 bg-white text-primary border-2 border-primary py-3 px-6 rounded-xl shadow-md hover:shadow-lg hover:bg-primary hover:text-white transition-all duration-300 font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <HiOutlineMail className="text-xl" />
+              Get In Touch
+            </motion.button>
+          </div>
+
+          {/* Social links */}
+          <div className="flex justify-center md:justify-start gap-4">
+            <motion.a
+              href="https://github.com/arafat-pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaGithub className="text-xl" />
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/arafat72"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaLinkedin className="text-xl" />
+            </motion.a>
+          </div>
         </motion.div>
+
         <motion.div
           className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <img
-            src='ArfatDP_2_no_bg.png'
-            alt="Profile"
-            className="rounded-full shadow-lg w-40 h-40 md:w-72 md:h-72 object-cover"
-          />
+          <div className="relative">
+            {/* Decorative ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent opacity-20 blur-xl scale-110"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-dashed border-primary/20 animate-spin-slow scale-125"></div>
+            
+            <img
+              src="ArfatDP_2_no_bg.png"
+              alt="Mohamed Arfat"
+              className="relative rounded-full shadow-2xl w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover ring-4 ring-white"
+            />
+          </div>
         </motion.div>
       </div>
 
-      {/* Scroll down icon */}
+      {/* Scroll down indicator */}
       <motion.div
         className="absolute bottom-8 flex justify-center w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, }}
-        onClick={() => scrollToSection('about')}
+        transition={{ duration: 1, delay: 0.5 }}
       >
-        <FaAngleDoubleDown className="text-4xl text-primary cursor-pointer hover:text-secondary transition-colors" />
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+          onClick={() => scrollToSection('about')}
+          className="cursor-pointer"
+        >
+          <FaAngleDoubleDown className="text-4xl text-primary hover:text-accent transition-colors" />
+        </motion.div>
       </motion.div>
     </section>
   );
