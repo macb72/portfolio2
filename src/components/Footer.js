@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaInstagram, FaLinkedin, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from 'react-scroll';
 
@@ -8,8 +8,8 @@ const Footer = () => {
   
   const socialLinks = [
     { icon: MdOutlineEmail, href: 'mailto:shaikharafad72@gmail.com', label: 'Email' },
-    { icon: FaGithub, href: 'https://github.com/arafat-pro', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/arafat72', label: 'LinkedIn' },
+    { icon: FaGithub, href: 'https://github.com/macb72', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/mohd-arfat-shaikh/', label: 'LinkedIn' },
     { icon: FaInstagram, href: 'https://www.instagram.com/king.arafat72/', label: 'Instagram' },
   ];
 

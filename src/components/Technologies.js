@@ -4,19 +4,20 @@ import {
   FaReact, 
   FaJs, 
   FaChrome,
-  FaGitAlt 
+  FaGitAlt,
+  FaHtml5,
+  FaCss3Alt
 } from 'react-icons/fa';
 import { 
   SiRedux, 
-  SiTailwindcss,
-  SiFramer
+  SiAzuredevops
 } from 'react-icons/si';
 import { HiOutlineChartBar } from 'react-icons/hi';
 
 const technologies = [
   { 
     name: 'React.js', 
-    description: 'Building scalable, component-based UIs with hooks and modern patterns', 
+    description: 'Building scalable, component-based UIs with hooks, context, and modern patterns', 
     icon: FaReact,
     color: 'bg-gradient-to-br from-cyan-400 to-blue-500'
   },
@@ -33,6 +34,12 @@ const technologies = [
     color: 'bg-gradient-to-br from-purple-500 to-purple-700'
   },
   { 
+    name: 'HTML5 & CSS3', 
+    description: 'Semantic markup, Flexbox, Grid, animations, and responsive design', 
+    icon: FaHtml5,
+    color: 'bg-gradient-to-br from-orange-400 to-red-500'
+  },
+  { 
     name: 'Data Visualization', 
     description: 'Interactive charts and dashboards for analytics platforms', 
     icon: HiOutlineChartBar,
@@ -40,27 +47,21 @@ const technologies = [
   },
   { 
     name: 'Chrome Extensions', 
-    description: 'WYSIWYG tools for A/B testing and personalization', 
+    description: 'WYSIWYG tools for visual A/B testing and personalization', 
     icon: FaChrome,
     color: 'bg-gradient-to-br from-green-400 to-teal-500'
   },
   { 
-    name: 'Git & Azure DevOps', 
-    description: 'Version control, CI/CD pipelines, and agile workflows', 
+    name: 'Git & Version Control', 
+    description: 'Branching strategies, code reviews, and collaborative workflows', 
     icon: FaGitAlt,
     color: 'bg-gradient-to-br from-orange-500 to-red-500'
   },
   { 
-    name: 'Tailwind CSS', 
-    description: 'Utility-first CSS for rapid, responsive UI development', 
-    icon: SiTailwindcss,
-    color: 'bg-gradient-to-br from-cyan-500 to-blue-600'
-  },
-  { 
-    name: 'Framer Motion', 
-    description: 'Smooth animations and micro-interactions', 
-    icon: SiFramer,
-    color: 'bg-gradient-to-br from-pink-500 to-purple-600'
+    name: 'Azure DevOps', 
+    description: 'CI/CD pipelines, sprint planning, and agile project management', 
+    icon: SiAzuredevops,
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-500'
   },
 ];
 

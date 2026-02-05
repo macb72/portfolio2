@@ -21,7 +21,7 @@ const skillCategories = [
     skills: [
       { name: 'JavaScript (ES6+)', icon: FaJs, level: 95, color: 'from-yellow-400 to-yellow-600' },
       { name: 'React.js', icon: FaReact, level: 95, color: 'from-cyan-400 to-blue-500' },
-      { name: 'TypeScript', icon: SiTypescript, level: 75, color: 'from-blue-400 to-blue-600' },
+      { name: 'TypeScript', icon: SiTypescript, level: 20, color: 'from-blue-400 to-blue-600' },
       { name: 'HTML5', icon: FaHtml5, level: 95, color: 'from-orange-400 to-red-500' },
       { name: 'CSS3', icon: FaCss3Alt, level: 90, color: 'from-blue-400 to-indigo-500' },
     ]
@@ -29,7 +29,7 @@ const skillCategories = [
   {
     title: 'Frontend Concepts',
     skills: [
-      { name: 'Redux / State Management', icon: SiRedux, level: 90, color: 'from-purple-400 to-purple-600' },
+      { name: 'Redux / State Management', icon: SiRedux, level: 60, color: 'from-purple-400 to-purple-600' },
       { name: 'Component Architecture', icon: HiOutlineCube, level: 90, color: 'from-green-400 to-teal-500' },
       { name: 'Data Visualization', icon: HiOutlineChartBar, level: 85, color: 'from-pink-400 to-rose-500' },
     ]
@@ -37,9 +37,9 @@ const skillCategories = [
   {
     title: 'Tools & Practices',
     skills: [
-      { name: 'Git & Version Control', icon: FaGitAlt, level: 90, color: 'from-orange-500 to-red-500' },
+      { name: 'Git & Version Control', icon: FaGitAlt, level: 70, color: 'from-orange-500 to-red-500' },
       { name: 'Azure DevOps', icon: SiAzuredevops, level: 80, color: 'from-blue-500 to-cyan-500' },
-      { name: 'Chrome Extension APIs', icon: FaChrome, level: 75, color: 'from-green-400 to-blue-500' },
+      { name: 'Chrome Extension APIs', icon: FaChrome, level: 60, color: 'from-green-400 to-blue-500' },
     ]
   }
 ];

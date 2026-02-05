@@ -70,7 +70,7 @@ const Contact = () => {
     {
       icon: HiOutlineLocationMarker,
       label: 'Location',
-      value: 'Navi Mumbai, India',
+      value: 'Mumbai, India (Open to GCC)',
       href: null
     }
   ];
@@ -78,13 +78,13 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: FaGithub,
-      href: 'https://github.com/arafat-pro',
+      href: 'https://github.com/macb72',
       label: 'GitHub',
       hoverColor: 'hover:bg-gray-900'
     },
     {
       icon: FaLinkedin,
-      href: 'https://www.linkedin.com/in/arafat72',
+      href: 'https://www.linkedin.com/in/mohd-arfat-shaikh/',
       label: 'LinkedIn',
       hoverColor: 'hover:bg-blue-600'
     }

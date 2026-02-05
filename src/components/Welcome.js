@@ -37,9 +37,14 @@ const Welcome = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
+            className="flex flex-wrap justify-center md:justify-start gap-2 mb-4"
           >
-            Senior Frontend Engineer
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              Senior Frontend Engineer
+            </span>
+            <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+              📍 Mumbai • Open to GCC
+            </span>
           </motion.div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
@@ -80,7 +85,7 @@ const Welcome = () => {
           {/* Social links */}
           <div className="flex justify-center md:justify-start gap-4">
             <motion.a
-              href="https://github.com/arafat-pro"
+              href="https://github.com/macb72"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-300"
@@ -90,7 +95,7 @@ const Welcome = () => {
               <FaGithub className="text-xl" />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/arafat72"
+              href="https://www.linkedin.com/in/mohd-arfat-shaikh/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-300"
@@ -114,7 +119,7 @@ const Welcome = () => {
             <div className="absolute inset-0 rounded-full border-4 border-dashed border-primary/20 animate-spin-slow scale-125"></div>
             
             <img
-              src="ArfatDP_2_no_bg.png"
+              src={process.env.PUBLIC_URL + '/arfat_latest.jpeg'}
               alt="Mohamed Arfat"
               className="relative rounded-full shadow-2xl w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover ring-4 ring-white"
             />

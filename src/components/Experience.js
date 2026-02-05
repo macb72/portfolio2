@@ -5,7 +5,7 @@ const experienceSteps = [
   {
     title: 'Senior Software Development Engineer',
     company: 'Jio Platforms Limited',
-    location: 'Navi Mumbai, India',
+    location: 'Mumbai, India',
     duration: 'Dec 2023 – Present',
     responsibilities: [
       'Led frontend development for an A/B testing and personalization platform, delivering data-driven UIs for segmentation, experiments, dashboards, customer profiles, catalogs, and admin workflows',
@@ -17,7 +17,7 @@ const experienceSteps = [
   {
     title: 'Software Development Engineer',
     company: 'Jio Platforms Limited',
-    location: 'Navi Mumbai, India',
+    location: 'Mumbai, India',
     duration: 'Sept 2020 – Nov 2023',
     responsibilities: [
       'Developed user-facing features using React and JavaScript based on Figma designs and detailed product requirements',
@@ -28,7 +28,7 @@ const experienceSteps = [
   {
     title: 'Graduate Engineer Trainee',
     company: 'Jio Platforms Limited',
-    location: 'Navi Mumbai, India',
+    location: 'Mumbai, India',
     duration: 'Aug 2019 – Aug 2020',
     responsibilities: [
       'Contributed to frontend development and QA efforts for large-scale applications including JioMart and MyJio',
